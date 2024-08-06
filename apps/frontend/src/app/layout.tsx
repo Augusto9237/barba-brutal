@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: 'Barba Brutal',
-    description: 'Barbearia mais brutal da cidade!',
+    title: 'Barber Legends',
+    description: 'Barbearia das lendas da cidade!',
 }
 
 export default function RootLayout({

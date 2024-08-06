@@ -7,11 +7,11 @@ export default function Logo() {
             <Image src="/logo.png" alt="Logo" width={65} height={65} className="hidden sm:block" />
             <Image src="/logo.png" alt="Logo" width={50} height={50} className="block sm:hidden" />
             <div className="flex flex-col justify-center h-full">
-                <span className="text-xl sm:text-2xl font-extralight leading-6 tracking-widest text-gradient">
-                    Barba
+                <span className="text-base sm:text-2xl font-extralight leading-6 tracking-widest text-gradient">
+                    Barber
                 </span>
-                <span className="text-[20px] sm:text-[24px] font-bold leading-6 pl-px text-gradient">
-                    Brutal
+                <span className="text-base sm:text-[24px] font-bold leading-6 pl-px text-gradient">
+                    Legends
                 </span>
             </div>
         </Link>
