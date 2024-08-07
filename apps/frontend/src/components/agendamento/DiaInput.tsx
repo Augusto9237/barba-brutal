@@ -16,12 +16,12 @@ export default function DiaInput(props: DiaInputProps) {
             <div
                 onClick={() => props.dataMudou(data)}
                 className={`
-                    flex-1 flex flex-col items-center gap-2 py-4 cursor-pointer
+                    flex-1 flex flex-col items-center gap-2 py-4 max-sm:px-[2px] cursor-pointer
                     ${selecionado ? 'bg-yellow-400 text-black' : 'text-zinc-400'}
                 `}
             >
                 <div className="flex items-center gap-1">
-                    <span className="text-2xl font-black">{data.getDate()}</span>
+                    <span className="text-2xl max-sm:text-base font-black">{data.getDate()}</span>
                     <span className="text-xs font-light uppercase">
                         {data.toLocaleDateString('pt-BR', { month: 'short' }).slice(0, 3)}
                     </span>
@@ -42,7 +42,7 @@ export default function DiaInput(props: DiaInputProps) {
     return (
         <div className="flex flex-col gap-5">
             <span className="text-sm uppercase text-zinc-400">Dias Disponíveis</span>
-            <div className="flex gap-5 bg-zinc-950 rounded-lg overflow-hidden">
+            <div className="flex gap-5 max-sm:gap-4 bg-zinc-950 rounded-lg overflow-hidden">
                 {Array.from({ length: 7 })
                     .map((_, i) => new Date(DataUtils.hoje().getTime() + 86400000 * i))
                     .filter((date) => date.getDay() !== 0)

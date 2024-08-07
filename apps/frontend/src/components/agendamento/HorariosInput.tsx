@@ -60,7 +60,7 @@ export default function HorariosInput(props: HorariosInputProps) {
                 }}
             >
                 <span
-                    className={cn('text-sm text-zinc-400', {
+                    className={cn('text-sm max-sm:text-xs text-zinc-400', {
                         'text-black font-semibold': destacarHora,
                         'text-white font-semibold': selecionado,
                         'text-zinc-400 font-semibold': ocupado,

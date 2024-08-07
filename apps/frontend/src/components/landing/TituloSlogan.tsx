@@ -1,21 +1,17 @@
-'use client'
-import Image from 'next/image'
 import Link from 'next/link'
-import MenuSuperior from '@/components/shared/MenuSuperior'
 
 export default function TituloSlogan() {
     return (
-        <div className="py-10 relative h-[700px]">
-            <Image src="/banners/principal.webp" fill alt="Barbearia" className="object-cover" />
+        <div className="relative h-screen bg-[url('/banners/principal.webp')] overflow-hidden">
             <div
                 className="
-                    flex flex-col items-center
-                    absolute top-0 left-0 w-full h-full
+                    flex flex-1 flex-col items-center w-full h-full
+                    absolute inset-0
                     bg-black/80 md:bg-transparent md:bg-gradient-to-r from-black/30 via-black/90 to-black/30
                 "
             >
-                <MenuSuperior />
-                <div className="container flex-1 flex flex-col justify-center items-center gap-5 z-50">
+               
+                <div className="container flex-1 flex flex-col justify-center items-center gap-5">
                     <h1 className="flex flex-col items-center">
                         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin tracking-wider">
                             Transformações
