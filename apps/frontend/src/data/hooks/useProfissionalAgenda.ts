@@ -7,13 +7,17 @@ export default function useProfissionalAgenda() {
     const { usuario } = useUsuario()
     const { httpGet, httpDelete } = useAPI()
     const [data, setData] = useState<Date>(new Date())
-    const [agendamentos, setAgendamentos] = useState<Agendamento[]>([])
+    const [agendamentos, setAgendamentos] = useState<Agendamento[]>([]);
+    const [agendamento, setAgendamento] = useState<Agendamento[]>([]);
 
     const carregarAgendamentos = useCallback(async () => {
         if (!usuario) return
         const dtString = data.toISOString().slice(0, 10)
         const agendamentos = await httpGet(`agendamentos/${usuario.id}/${dtString}`)
+        const agendamento = await httpGet(`agendamentos/${usuario.email}`)
+      
         setAgendamentos(agendamentos)
+        setAgendamento(agendamento)
     }, [httpGet, usuario, data])
 
     useEffect(() => {
@@ -28,6 +32,7 @@ export default function useProfissionalAgenda() {
     return {
         data,
         agendamentos,
+        agendamento,
         alterarData: setData,
         excluirAgendamento,
     }

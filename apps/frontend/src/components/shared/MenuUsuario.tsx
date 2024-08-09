@@ -36,11 +36,9 @@ export default function MenuUsuario(props: MenuUsuarioProps) {
             <DropdownMenuContent>
                 <DropdownMenuLabel>Menu Usuário</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {usuario?.barbeiro && (
-                    <DropdownMenuItem onClick={() => router.push('/agenda')}>
+                    <DropdownMenuItem onClick={() => router.push(usuario?.barbeiro ? '/agenda' : '/minhaagenda')}>
                         Minha Agenda
                     </DropdownMenuItem>
-                )}
                 <DropdownMenuItem onClick={sair}>Logout</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
